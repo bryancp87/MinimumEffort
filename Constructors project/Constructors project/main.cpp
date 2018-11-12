@@ -23,6 +23,9 @@ int main()
     Player defaultEmpty;
     get_info(defaultEmpty);
     
+    Player TOFU ("TOFU", 80);
+    get_info(TOFU);
+    
     Player TOM ("TOM", 80, 10);
     get_info(TOM);
     
