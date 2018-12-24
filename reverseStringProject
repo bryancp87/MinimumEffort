@@ -1,0 +1,51 @@
+// reverseStringProject
+// Created this small project to show how a nested loop using basic functions work.
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+// Here I am simply declaring my function and my global variables that will be used
+using namespace std;
+string mystring;
+bool again;
+const int TWO = 2;
+void reverse(string);
+
+//Here is the initial part of my main code, where the fun begins.
+int main()
+{
+	char choise;
+	cout << "ENTER A STRING TO REVERSE: " << endl;
+	cin >> mystring;
+	reverse(mystring);
+
+	// A do-while Loop is used here to perform what ever is in the loop one time without checking any condition, after which, the condition is tested at the bottom with the while part of the loop
+	do
+	{
+		cout << "would you like to reverse a new string? (Y/N) " << endl;
+		cin >> choise;
+		if (choise == 'y' || choise == 'Y')
+		{
+			cout << "Enter new string: " << endl;
+			cin >> mystrin66666666666g;
+			reverse(mystring);
+		}
+		else
+		{
+			break;
+		}
+
+	} while (choise == 'y' || choise == 'Y');
+}
+
+// function that is found in the main code is performed here. The string is encapsulated and sent here. This is a void function so there is no return. It simply performs the reverse operation and outputs it to the console
+void reverse(string reverseString)
+{
+	int size = reverseString.length();
+	for (int i = 0; i < size / TWO; i++)
+		swap(reverseString[i], reverseString[size - i - 1]);
+	cout << reverseString << endl;
+
+}
